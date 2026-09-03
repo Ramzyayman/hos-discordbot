@@ -106,6 +106,7 @@ bot = commands.Bot(
 
 @bot.event
 async def on_ready():
+    keep_alive()
     init_db()
     print(f"✅ Logged in as {bot.user} (ID: {bot.user.id})")
     print(f"📸 Monitoring for {TRIGGER_EMOJI} (Threshold: {REQUIRED_REACTIONS})")
